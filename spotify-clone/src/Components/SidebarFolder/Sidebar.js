@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Sidebar.css";
 import SidebarOption from "../SidebarOptionFolder/SidebarOption";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
 import LibraryMusicIcon from "@mui/icons-material/LibraryMusic";
+import { useDataLayerValue } from "../../DataLayer";
 
 function Sidebar() {
+  const [{ playlists }, dispatch] = useDataLayerValue();
+
   return (
     <div className="sidebar">
       <img
@@ -17,7 +20,15 @@ function Sidebar() {
       <SidebarOption Icon={HomeIcon} title="Home" />
       <SidebarOption Icon={SearchIcon} title="Search" />
       <SidebarOption Icon={LibraryMusicIcon} title="Your Library" />
-    </div>
+      <br />
+      <strong className="sidebar__tittle">PLAYLISTS</strong>
+      <hr />
+
+      {playlists?.items?.map(playlist => (
+    <SidebarOption title={playlist.name} />
+))}
+
+ </div>
   );
 }
 

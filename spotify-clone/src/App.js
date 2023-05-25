@@ -33,6 +33,15 @@ function App() {
           user: user,
         });
       });
+
+      //get data from spotiify to show playlists + reducer.js
+      spotify.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists: playlists,
+        });
+      });
+
     }
 
   }, []);
