@@ -18,7 +18,7 @@ function Body(spotify) {
         <img src={discover_weekly?.images[0].url} alt="" />
         <div className="body__infoText">
           <strong>PLAYLISTS</strong>
-          <h2>Descobertas da Semana</h2>
+          <h2>Descobertas</h2>
           <p>{discover_weekly?.description}</p>
         </div>
       </div>
