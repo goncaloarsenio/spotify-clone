@@ -36,11 +36,11 @@ const reducer = (state, action) => {
         ...state,
         discover_weekly: action.discover_weekly,
       };
-    /*   case "SET_SPOTIFY":
+      case "SET_SPOTIFY":
         return {
           ...state,
           spotify: action.spotify,
-        }; */
+        };
 
     default:
       return state;

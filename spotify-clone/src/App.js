@@ -49,10 +49,10 @@ function App() {
         })
       })
 
-    /*   dispatch({
+      dispatch({
         type: "SET_SPOTIFY",
         spotify: spotify,
-      }); */
+      });
 
     }
 
